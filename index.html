@@ -38,6 +38,11 @@
           </li>
         </ul>
       </address>
+      <button type="button" class="menu-btn">
+        <svg class="menu-btn-svg" width="17" height="15">
+          <use href="./images/icons.svg#menu-btn"></use>
+        </svg>
+      </button>
     </div>
   </header>
   <!-- #endregion Header -->
@@ -412,7 +417,7 @@
   </footer>
   <!-- #endregion section footer -->
 
-  <div class="modal-overlay">
+  <div class="modal-overlay is-closed">
     <div class="modal">
       <button class="close-button" type="button">
         <svg class="icon-modal" width="8" height="8">
@@ -420,58 +425,59 @@
         </svg>
       </button>
       <p class="modal-p">Leave your contacts and we will call you back</p>
-      
+
 
       <form class="form">
-          <div class="form-field">
-            <label class="form-label" for="user-name">Name</label>
-            <div class="icon-wrapper">
-              <input class="form-input" type="text" name="user-name" id="user-name" autofocus>
-              <svg class="field-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-person"></use>
+        <div class="form-field">
+          <label class="form-label" for="user-name">Name</label>
+          <div class="icon-wrapper">
+            <input class="form-input" type="text" name="user-name" id="user-name" autofocus>
+            <svg class="field-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="form-phone">Phone</label>
+          <div class="icon-wrapper">
+            <input class="form-input" type="email" name="phone" id="form-phone">
+            <svg class="field-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-phone-i"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="form-email">Email</label>
+          <div class="icon-wrapper">
+            <input class="form-input" type="tel" name="email" id="form-email">
+            <svg class="field-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="form-field text-area">
+          <label class="form-label" for="user-comment">Comment</label>
+          <textarea class="form-textarea" name="user-comment" id="user-comment" placeholder="Text input"></textarea>
+        </div>
+
+        <div class="privacy-pol-div">
+          <input type="checkbox" class="checkbox-input visually-hidden" id="user-privacy" name="user-privacy"
+            value="true">
+          <label class="policy-label" for="user-privacy">
+            <span class="custom-box">
+              <svg class="checked-icon" width="10" height="8">
+                <use href="./images/icons.svg#icon-checked"></use>
               </svg>
-            </div>
-          </div>
+            </span>
+            I accept the terms and conditions of the
+            <a href="#" class="privacy-pol">Privacy Policy</a>
+          </label>
+        </div>
 
-          <div class="form-field">
-            <label class="form-label" for="form-phone">Phone</label>
-            <div class="icon-wrapper">
-              <input class="form-input" type="email" name="phone" id="form-phone">
-              <svg class="field-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-phone-i"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="form-field">
-            <label class="form-label" for="form-email">Email</label>
-            <div class="icon-wrapper">
-              <input class="form-input" type="tel" name="email" id="form-email">
-              <svg class="field-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-email"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="form-field text-area">
-            <label class="form-label" for="user-comment">Comment</label>
-            <textarea class="form-textarea" name="user-comment" id="user-comment" placeholder="Text input"></textarea>
-          </div>
-
-          <div class="privacy-pol-div">
-            <input type="checkbox" class="checkbox-input visually-hidden"  id="user-privacy" name="user-privacy" value="true">
-            <label class="policy-label" for="user-privacy">
-              <span class="custom-box">
-                <svg class="checked-icon" width="10" height="8">
-                  <use href="./images/icons.svg#icon-checked"></use>
-                </svg>
-              </span>
-              I accept the terms and conditions of the
-              <a href="#" class="privacy-pol">Privacy Policy</a>
-            </label>
-          </div>
-
-          <button class="btn-submit" type="submit">Send</button>
+        <button class="btn-submit" type="submit">Send</button>
 
 
       </form>
