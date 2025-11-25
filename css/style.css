@@ -141,6 +141,8 @@ body {
     list-style-type: none;
 }
 
+
+
 .menu-btn {
     display: flex;
     align-items: center;
@@ -1020,9 +1022,18 @@ body {
         min-width: 768px;
     }
 
+    .order-service .container {
+        flex-direction: column;
+        ;
+    }
+
+    .header .container {
+        flex-direction: row;
+    }
+
     .container {
         max-width: 736px;
-        flex-direction: row;
+        flex-direction: column;
         margin: 0 auto;
     }
 
@@ -1044,17 +1055,22 @@ body {
         display: none;
     }
 
-    .about-us-icon {
-        display: flex;
-    }
-
     .about-us-list {
         flex-direction: row;
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
     }
+
+    .about-us-list .about-us-li {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
 
     .nav-list-link.current::after {
         display: flex;
     }
+
 
     .burger-menu {
         opacity: 0;
@@ -1066,6 +1082,18 @@ body {
 
     .mobile-menu {
         display: none;
+    }
+
+    .team-member {
+        flex-direction: row;
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+
+    }
+
+    .team-member-field {
+        flex-basis: calc((100% - 24px) / 2);
     }
 }
 
@@ -1117,12 +1145,15 @@ body {
     .about-us-p {
         font-weight: 400;
     }
-}
 
-@media screen and (min-width: 1158px) and (min-resolution:192dpi) {
-    .order-service {
-        background-image:
-            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/hero-desk@2x.jpg);
+    .about-us-list .about-us-li {
+        flex-basis: calc((100% - 3 * 24px) / 4);
     }
-}
+
+    @media screen and (min-width: 1158px) and (min-resolution:192dpi) {
+        .order-service {
+            background-image:
+                linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/hero-desk@2x.jpg);
+        }
+    }
